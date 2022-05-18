@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AgarrarObject : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class AgarrarObject : MonoBehaviour
 
     public int score;
 
-    public Text TXTScore;
+    public TMP_Text TXTScore;
 
     void Update()
     {
