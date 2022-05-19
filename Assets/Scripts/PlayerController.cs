@@ -4,8 +4,14 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public float rapidezDesplazamiento = 10.0f;
+
     public Camera camaraPrimeraPersona;
+
     private Rigidbody rb;
+
+    public GameObject mecanics;
+
+    public GameObject map;
 
 
     void Start()
@@ -30,6 +36,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             Cursor.lockState = CursorLockMode.None;
+        }
+
+
+        if (Input.GetKeyDown("x"))
+        {
+
+            gameObject.transform.position = mecanics.transform.position;
+
+        }
+
+        if (Input.GetKeyDown("z"))
+        {
+
+            gameObject.transform.position = map.transform.position;
+
         }
     }
 }

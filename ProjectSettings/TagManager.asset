@@ -9,6 +9,8 @@ TagManager:
   - ASD
   - Cross
   - Hand
+  - Bible
+  - PutBible
   layers:
   - Default
   - TransparentFX
