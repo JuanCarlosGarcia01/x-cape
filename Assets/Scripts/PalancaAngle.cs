@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PalancaAngle : MonoBehaviour
 {
+    [HideInInspector] public ILeverManager manager;
+
     private float RotateRate = 1f;
 
     private float WaitTime = 0;
@@ -23,6 +25,7 @@ public class PalancaAngle : MonoBehaviour
 
                 WaitTime = Time.time + RotateRate;
                 
+                manager.Check();
             }
         }
     }
