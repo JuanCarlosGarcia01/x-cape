@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1898,7 +1898,7 @@ GameObject:
   - component: {fileID: 363740727}
   - component: {fileID: 363740726}
   m_Layer: 0
-  m_Name: Bible2
+  m_Name: Bible1
   m_TagString: Bible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2126,6 +2126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WallPoint: {fileID: 473567196}
   agarrarObject: {fileID: 649987597}
+  bibleWall: {fileID: 473567198}
+  puzzles: {fileID: 1913642750}
+  active: 0
 --- !u!1 &395967459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5444898335986702675, guid: a46c08ce171d01542b8b68d27e6310b2, type: 3}
@@ -2406,6 +2409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473567197}
+  - component: {fileID: 473567198}
   m_Layer: 0
   m_Name: WallPoint1
   m_TagString: Untagged
@@ -2427,6 +2431,21 @@ Transform:
   m_Father: {fileID: 389235067}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &473567198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473567196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b34004c7ba74c4884853cf1aca0883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFind: {fileID: 0}
+  Bible: {fileID: 363740725}
+  active: 0
 --- !u!1 &486504937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4791061893230386206, guid: a46c08ce171d01542b8b68d27e6310b2, type: 3}
@@ -3557,7 +3576,7 @@ GameObject:
   - component: {fileID: 794158424}
   - component: {fileID: 794158423}
   m_Layer: 0
-  m_Name: Bible1
+  m_Name: Bible3
   m_TagString: Bible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4535,7 +4554,7 @@ GameObject:
   - component: {fileID: 1014921420}
   - component: {fileID: 1014921419}
   m_Layer: 0
-  m_Name: Bible3
+  m_Name: Bible2
   m_TagString: Bible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4802,7 +4821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3448818956935642044, guid: 9b3ab6ec9d16df142aee8747d6efda82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7881703
+      value: 4.09
       objectReference: {fileID: 0}
     - target: {fileID: 3448818956935642044, guid: 9b3ab6ec9d16df142aee8747d6efda82, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6417,6 +6436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WallPoint: {fileID: 2011993648}
   agarrarObject: {fileID: 649987597}
+  bibleWall: {fileID: 2011993650}
+  puzzles: {fileID: 1913642750}
+  active: 0
 --- !u!1 &1485432759 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4490680429319748464, guid: a46c08ce171d01542b8b68d27e6310b2, type: 3}
@@ -7449,7 +7471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3448818956935642044, guid: 9b3ab6ec9d16df142aee8747d6efda82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.108016
+      value: 1.625
       objectReference: {fileID: 0}
     - target: {fileID: 3448818956935642044, guid: 9b3ab6ec9d16df142aee8747d6efda82, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7713,6 +7735,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BatteryPoint: {fileID: 1931828006}
   agarrarObject: {fileID: 649987597}
+  bibleWall: {fileID: 473567198}
+  bibleWall1: {fileID: 1931959973}
+  bibleWall2: {fileID: 2011993650}
   palancaAngle: {fileID: 1093461711}
   palancaAngle1: {fileID: 268470337}
   palancaAngle2: {fileID: 1349701365}
@@ -7884,6 +7909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1931959972}
+  - component: {fileID: 1931959973}
   m_Layer: 0
   m_Name: WallPoint2
   m_TagString: Untagged
@@ -7905,6 +7931,21 @@ Transform:
   m_Father: {fileID: 2100060922}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1931959973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931959971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b34004c7ba74c4884853cf1aca0883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFind: {fileID: 0}
+  Bible: {fileID: 1014921418}
+  active: 0
 --- !u!1 &1941255048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7094436316560243455, guid: a46c08ce171d01542b8b68d27e6310b2, type: 3}
@@ -8039,6 +8080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011993649}
+  - component: {fileID: 2011993650}
   m_Layer: 0
   m_Name: WallPoint3
   m_TagString: Untagged
@@ -8060,6 +8102,21 @@ Transform:
   m_Father: {fileID: 1437327917}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011993650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011993648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b34004c7ba74c4884853cf1aca0883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFind: {fileID: 0}
+  Bible: {fileID: 794158422}
+  active: 0
 --- !u!1 &2018560346 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8039269629674871522, guid: a46c08ce171d01542b8b68d27e6310b2, type: 3}
@@ -8452,6 +8509,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WallPoint: {fileID: 1931959971}
   agarrarObject: {fileID: 649987597}
+  bibleWall: {fileID: 1931959973}
+  puzzles: {fileID: 1913642750}
+  active: 0
 --- !u!1 &2113961816 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -642586189662459515, guid: a46c08ce171d01542b8b68d27e6310b2, type: 3}

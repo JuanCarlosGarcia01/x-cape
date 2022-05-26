@@ -20,6 +20,7 @@ public class AgarrarObject : MonoBehaviour
     public float WaitTime = 0;
 
     private float TimeRate = 1f;
+
     void Update()
     {
         TXTScore.text = "Score: " + score;
@@ -64,6 +65,7 @@ public class AgarrarObject : MonoBehaviour
                     if (other.gameObject.CompareTag("PutBible"))
                     {
                         other.tag = "Bible";
+
                     }
                 }
 

@@ -8,14 +8,27 @@ public class BiblePuzzle : MonoBehaviour
 
     public AgarrarObject agarrarObject;
 
+    public BibleWallPoint bibleWall;
+
+    public Puzzles puzzles;
+
     private float TimeRate = 2f;
+
+    public bool active = false;
+
+
+    
+    
 
 
     private void OnTriggerStay(Collider other)
     {
 
+
         if (other.gameObject.CompareTag("Bible") && Time.time > agarrarObject.WaitTime)
         {
+
+            active = true;
 
             other.transform.position = WallPoint.transform.position;
 
@@ -33,7 +46,13 @@ public class BiblePuzzle : MonoBehaviour
 
             other.tag = "PutBible";
 
+            other.gameObject.transform.SetParent(WallPoint.gameObject.transform);
+
+            bibleWall.BiblePuzzle();
+
+            puzzles.BibleComprobate();
 
         }
     }
+
 }

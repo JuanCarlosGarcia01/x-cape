@@ -9,11 +9,14 @@ public class Puzzles : MonoBehaviour
 
     public AgarrarObject agarrarObject;
 
+    public BibleWallPoint bibleWall;
+    public BibleWallPoint bibleWall1;
+    public BibleWallPoint bibleWall2;
+
     public PalancaAngle palancaAngle;
     public PalancaAngle palancaAngle1;
     public PalancaAngle palancaAngle2;
     public PalancaAngle palancaAngle3;
-
 
     public GameObject Cross;
     public GameObject Cross1;
@@ -30,13 +33,8 @@ public class Puzzles : MonoBehaviour
 
     void Update()
     {
-        //Comprobación puzzle palancas
-        if (palancaAngle.active == true && palancaAngle1.active == false && palancaAngle2.active == true && palancaAngle3.active == true)
-        {
 
-            StartCoroutine("PalancaPuzzle");
-
-        }
+        
         // Comprobación puzzle cruces
         if (Cross.transform.rotation.eulerAngles.z == 180 && Cross1.transform.rotation.eulerAngles.z == 180 && Cross2.transform.rotation.eulerAngles.z == 180)
         {
@@ -78,11 +76,14 @@ public class Puzzles : MonoBehaviour
 
     }
 
-    IEnumerator PalancaPuzzle()
+    public void BibleComprobate()
     {
-        //abrir puertas
-        yield return new WaitForSeconds(1);
-        prueba2.text = "HelloWord!";
+        if (bibleWall.active == true && bibleWall1.active == true && bibleWall2.active == true)
+        {
+
+            Debug.Log("hola");
+
+        }
 
     }
 }
