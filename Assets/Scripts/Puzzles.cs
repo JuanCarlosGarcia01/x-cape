@@ -7,6 +7,10 @@ public class Puzzles : MonoBehaviour
 {
     public GameObject BatteryPoint;
 
+    public OpenDoor OpenCroosDoor;
+    public OpenDoor OpenBatteryDoor;
+    public OpenDoor OpenBibleDoor;
+
     public AgarrarObject agarrarObject;
 
     public BibleWallPoint bibleWall;
@@ -31,16 +35,16 @@ public class Puzzles : MonoBehaviour
     public Text prueba2;
 
 
-    void Update()
+    public void ComprobateCross()
     {
 
         
-        // Comprobación puzzle cruces
+         //Comprobación puzzle cruces
         if (Cross.transform.rotation.eulerAngles.z == 180 && Cross1.transform.rotation.eulerAngles.z == 180 && Cross2.transform.rotation.eulerAngles.z == 180)
         {
-
-            CrossPuzzle();
-
+        
+            OpenCroosDoor.Opendoor();
+        
         }
 
     }
@@ -65,6 +69,8 @@ public class Puzzles : MonoBehaviour
 
             other.tag = "ASD";
 
+            OpenBatteryDoor.Opendoor();
+
         }
     }
 
@@ -81,7 +87,7 @@ public class Puzzles : MonoBehaviour
         if (bibleWall.active == true && bibleWall1.active == true && bibleWall2.active == true)
         {
 
-            Debug.Log("hola");
+            OpenBibleDoor.Opendoor();
 
         }
 

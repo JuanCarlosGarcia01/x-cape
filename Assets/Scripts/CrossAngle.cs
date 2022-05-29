@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CrossAngle : MonoBehaviour
 {
+    public Puzzles puzzles;
+
     private float RotateRate = 1f;
 
     private float WaitTime = 0;
@@ -25,6 +27,8 @@ public class CrossAngle : MonoBehaviour
 
                     WaitTime = Time.time + RotateRate;
 
+                    Invoke("ComprobateCross", 1f);
+
                 }
                 else
                 {
@@ -32,6 +36,14 @@ public class CrossAngle : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ComprobateCross()
+    {
+
+
+        puzzles.ComprobateCross();
+
     }
 
 }

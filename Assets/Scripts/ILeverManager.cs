@@ -10,6 +10,8 @@ public class ILeverManager : MonoBehaviour
     [SerializeField] private UnityEvent actions;
     [SerializeField] private TextMeshPro text;
 
+    public OpenDoor OpenPalancasDoor;
+
     private bool[] levers;
 
     private void Start()
@@ -33,6 +35,6 @@ public class ILeverManager : MonoBehaviour
 
         // TODO OK
         actions?.Invoke();
-        Debug.Log("Bien");
+        OpenPalancasDoor.Opendoor();
     }
 }
