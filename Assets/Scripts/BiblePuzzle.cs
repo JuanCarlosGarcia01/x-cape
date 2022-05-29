@@ -25,7 +25,7 @@ public class BiblePuzzle : MonoBehaviour
     {
 
 
-        if (other.gameObject.CompareTag("Bible") && Time.time > agarrarObject.WaitTime)
+        if (other.gameObject.CompareTag("Bible") && Time.time > agarrarObject.WaitTime && WallPoint.transform.childCount == 0)
         {
 
             active = true;
