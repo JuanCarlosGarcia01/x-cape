@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Cordure : MonoBehaviour
 {
@@ -24,8 +26,9 @@ public class Cordure : MonoBehaviour
         if (cordure <= 1)
 
         {
-            indicator.text = "Game Over";
+            Cursor.lockState = CursorLockMode.None;
             changePerSecond = 0;
+            SceneManager.LoadScene("Lose");
         }
 
     }
