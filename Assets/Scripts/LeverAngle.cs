@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PalancaAngle : MonoBehaviour
+public class LeverAngle : MonoBehaviour
 {
     [HideInInspector] public ILeverManager manager;
 

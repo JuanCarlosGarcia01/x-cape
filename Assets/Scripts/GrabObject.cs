@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class AgarrarObject : MonoBehaviour
+public class GrabObject : MonoBehaviour
 {
 
     public GameObject handPoint;

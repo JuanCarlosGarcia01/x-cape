@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
-    public AgarrarObject agarrarObject;
+    public GrabObject grabObject;
 
     public string scene;
 
     private void OnTriggerStay(Collider collision)
 
     {
-        if (collision.CompareTag("Player") && agarrarObject.score == 10)
+        if (collision.CompareTag("Player") && grabObject.score == 10)
         {
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(scene);

@@ -5,12 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class Cordure : MonoBehaviour
+public class Sanity : MonoBehaviour
 {
 
     public Text indicator;
 
-    public float cordure;
+    public float sanity;
 
     public float changePerSecond;
 
@@ -18,12 +18,12 @@ public class Cordure : MonoBehaviour
     void FixedUpdate()
     {
 
-        cordure += changePerSecond * Time.deltaTime;
+        sanity += changePerSecond * Time.deltaTime;
 
 
-        indicator.text = ((int)cordure).ToString();
+        indicator.text = ((int)sanity).ToString();
 
-        if (cordure <= 1)
+        if (sanity <= 1)
 
         {
             Cursor.lockState = CursorLockMode.None;

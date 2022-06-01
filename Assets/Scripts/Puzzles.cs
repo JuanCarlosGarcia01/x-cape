@@ -11,16 +11,11 @@ public class Puzzles : MonoBehaviour
     public OpenDoor OpenBatteryDoor;
     public OpenDoor OpenBibleDoor;
 
-    public AgarrarObject agarrarObject;
+    public GrabObject grabObject;
 
     public BibleWallPoint bibleWall;
     public BibleWallPoint bibleWall1;
     public BibleWallPoint bibleWall2;
-
-    public PalancaAngle palancaAngle;
-    public PalancaAngle palancaAngle1;
-    public PalancaAngle palancaAngle2;
-    public PalancaAngle palancaAngle3;
 
     public GameObject Cross;
     public GameObject Cross1;
@@ -59,7 +54,7 @@ public class Puzzles : MonoBehaviour
 
             other.transform.rotation = BatteryPoint.transform.rotation;
 
-            agarrarObject.pickedObject = null;
+            grabObject.pickedObject = null;
 
             other.GetComponent<Rigidbody>().useGravity = false;
 

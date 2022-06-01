@@ -6,7 +6,7 @@ using TMPro;
 
 public class ILeverManager : MonoBehaviour
 {
-    [SerializeField] private PalancaAngle[] leversObj;
+    [SerializeField] private LeverAngle[] leversObj;
     [SerializeField] private UnityEvent actions;
     [SerializeField] private TextMeshPro text;
 

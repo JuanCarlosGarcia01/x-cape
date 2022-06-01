@@ -6,7 +6,7 @@ public class BiblePuzzle : MonoBehaviour
 {
     public GameObject WallPoint;
 
-    public AgarrarObject agarrarObject;
+    public GrabObject agarrarObject;
 
     public BibleWallPoint bibleWall;
 
