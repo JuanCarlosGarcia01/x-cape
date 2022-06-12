@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,19 +27,17 @@ public class Puzzles : MonoBehaviour
     public Text prueba;
     public Text prueba2;
 
+    public AudioSource BatterySound;
+    public AudioSource PutBatterySound;
+
 
     public void ComprobateCross()
-    {
-
-        
+    { 
          //Comprobación puzzle cruces
         if (Cross.transform.rotation.eulerAngles.z == 180 && Cross1.transform.rotation.eulerAngles.z == 180 && Cross2.transform.rotation.eulerAngles.z == 180)
         {
-        
             OpenCroosDoor.Opendoor();
-        
         }
-
     }
 
     private void OnTriggerStay(Collider other)
@@ -49,42 +45,25 @@ public class Puzzles : MonoBehaviour
         //Poner Bateria y abrir puertas
         if (other.gameObject.CompareTag("Object"))
         {
-
             other.transform.position = BatteryPoint.transform.position;
-
             other.transform.rotation = BatteryPoint.transform.rotation;
-
             grabObject.pickedObject = null;
-
             other.GetComponent<Rigidbody>().useGravity = false;
-
             other.GetComponent<Rigidbody>().isKinematic = true;
-
             other.gameObject.transform.SetParent(null);
-
             other.tag = "ASD";
-
             OpenBatteryDoor.Opendoor();
 
+            BatterySound.Play();
+            PutBatterySound.Play();
         }
-    }
-
-    void CrossPuzzle()
-        //abrir puertas
-    {
-
-        prueba.text = "HelloWord!";
-
     }
 
     public void BibleComprobate()
     {
         if (bibleWall.active == true && bibleWall1.active == true && bibleWall2.active == true)
         {
-
             OpenBibleDoor.Opendoor();
-
         }
-
     }
 }

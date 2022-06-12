@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BibleWallPoint : MonoBehaviour
 {
     public GameObject objectToFind;
-
     public GameObject Bible;
 
     public bool active = false;
@@ -16,15 +13,11 @@ public class BibleWallPoint : MonoBehaviour
 
         if (objectToFind == Bible)
         {
-
-            active = true;
-            
+            active = true;     
         }
         else
         {
-
             active = false;
-
         }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CrossAngle : MonoBehaviour
@@ -12,6 +10,8 @@ public class CrossAngle : MonoBehaviour
 
     private int angle = 0;
 
+    public AudioSource CrossSound;
+
     public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Hand"))
@@ -22,13 +22,10 @@ public class CrossAngle : MonoBehaviour
                 {
 
                     angle += 90;
-
                     gameObject.LeanRotateZ(angle, 1f);
-
                     WaitTime = Time.time + RotateRate;
-
                     Invoke("ComprobateCross", 1f);
-
+                    CrossSound.Play();
                 }
                 else
                 {
