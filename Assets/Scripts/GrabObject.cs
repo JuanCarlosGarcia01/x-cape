@@ -12,6 +12,7 @@ public class GrabObject : MonoBehaviour
     public float WaitTime = 0;
     private float TimeRate = 1f;
     public AudioSource SoundPickBattery;
+    public AudioSource BibleSound;
 
     void Update()
     {
@@ -46,11 +47,16 @@ public class GrabObject : MonoBehaviour
                     WaitTime = Time.time + TimeRate;
                     if (other.gameObject.CompareTag("PutBible"))
                     {
+                        BibleSound.Play();
                         other.tag = "Bible";
                     }
                     if (other.gameObject.CompareTag("Object"))
                     {
                         SoundPickBattery.Play();
+                    }
+                    if (other.gameObject.CompareTag("Bible"))
+                    {
+                        BibleSound.Play();
                     }
                 }
             }

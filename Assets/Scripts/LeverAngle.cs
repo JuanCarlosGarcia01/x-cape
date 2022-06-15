@@ -9,6 +9,7 @@ public class LeverAngle : MonoBehaviour
     private float RotateRate = 1f;
     private float WaitTime = 0;
     public bool active = false;
+    public AudioSource SoundLever;
 
     public void OnTriggerStay(Collider other)
     {
@@ -20,6 +21,7 @@ public class LeverAngle : MonoBehaviour
                 gameObject.LeanRotateX(active ? 45 : 315, 1f);
                 WaitTime = Time.time + RotateRate;
                 manager.Check();
+                SoundLever.Play();
             }
         }
     }
