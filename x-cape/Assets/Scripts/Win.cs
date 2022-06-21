@@ -6,7 +6,7 @@ public class Win : MonoBehaviour
     public GrabObjects grabObject;
     public string scene;
 
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerEnter(Collider collision)
 
     {
         if (collision.CompareTag("Player") && grabObject.score == 10)

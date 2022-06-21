@@ -37,7 +37,7 @@ public class GrabObjects : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Object") || other.gameObject.CompareTag("Bible") || other.gameObject.CompareTag("PutBible") && Time.time > WaitTime)
             {
-                if (Input.GetKey("e") && pickedObject == null)
+                if (Input.GetKey("m") /*|| OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch)*/ && pickedObject == null)
                 {
                     other.GetComponent<Rigidbody>().useGravity = false;
                     other.GetComponent<Rigidbody>().isKinematic = true;
@@ -63,8 +63,9 @@ public class GrabObjects : MonoBehaviour
 
             if (other.gameObject.CompareTag("Coin"))
             {
-                if (Input.GetKey("e") && pickedObject == null)
+                if (Input.GetKey("m") && pickedObject == null)
                 {
+                    Debug.Log("hola");
                     score++;
                     Destroy(other.gameObject);
                 }
