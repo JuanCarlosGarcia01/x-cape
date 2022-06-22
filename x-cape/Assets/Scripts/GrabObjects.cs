@@ -7,8 +7,7 @@ public class GrabObjects : MonoBehaviour
     public GameObject handPoint;
     public GameObject pickedObject = null;
     public GameObject Battery;
-    public int score;
-    public TMP_Text TXTScore;
+    public Score score;
     public float WaitTime = 0;
     private float TimeRate = 1f;
     public AudioSource SoundPickBattery;
@@ -16,12 +15,12 @@ public class GrabObjects : MonoBehaviour
 
     void Update()
     {
-        TXTScore.text = "Score: " + score;
+
 
 
         if (pickedObject != null)
         {
-            if (Input.GetKey("r") && Time.time > WaitTime)
+            if (Input.GetKey("r") || OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.RTouch) || OVRInput.GetDown(OVRInput.Button.Two, OVRInput.Controller.LTouch) && Time.time > WaitTime)
             {
                 pickedObject.GetComponent<Rigidbody>().useGravity = true;
                 pickedObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -32,12 +31,13 @@ public class GrabObjects : MonoBehaviour
         }
     }
 
+
     private void OnTriggerStay(Collider other)
     {
         {
-            if (other.gameObject.CompareTag("Object") || other.gameObject.CompareTag("Bible") || other.gameObject.CompareTag("PutBible") && Time.time > WaitTime)
+            if (other.gameObject.CompareTag("Object") || other.gameObject.CompareTag("Bible") || other.gameObject.CompareTag("PutBible") && Time.time > WaitTime )
             {
-                if (Input.GetKey("m") /*|| OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch)*/ && pickedObject == null)
+                if (Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch) || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch) && pickedObject == null)
                 {
                     other.GetComponent<Rigidbody>().useGravity = false;
                     other.GetComponent<Rigidbody>().isKinematic = true;
@@ -63,10 +63,9 @@ public class GrabObjects : MonoBehaviour
 
             if (other.gameObject.CompareTag("Coin"))
             {
-                if (Input.GetKey("m") && pickedObject == null)
+                if (Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch) || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch) && pickedObject == null)
                 {
-                    Debug.Log("hola");
-                    score++;
+                    score.MoreScore();
                     Destroy(other.gameObject);
                 }
             }                        

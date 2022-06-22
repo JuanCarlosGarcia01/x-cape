@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
-    public GrabObjects grabObject;
+    public Score score;
     public string scene;
 
     private void OnTriggerEnter(Collider collision)
 
     {
-        if (collision.CompareTag("Player") && grabObject.score == 10)
+        if (collision.CompareTag("Player") && score.score == 10)
         {
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(scene);
