@@ -3,7 +3,8 @@ using UnityEngine;
 public class BiblePuzzle : MonoBehaviour
 {
     public GameObject WallPoint;
-    public GrabObjects agarrarObject;
+    public GrabObjectsL agarrarObjectL;
+    public GrabObjectsR agarrarObjectR;
     public BibleWallPoint bibleWall;
     public Puzzles puzzles;
     private float TimeRate = 2f;
@@ -11,16 +12,18 @@ public class BiblePuzzle : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Bible") && Time.time > agarrarObject.WaitTime && WallPoint.transform.childCount == 0)
+        if (other.gameObject.CompareTag("Bible") && Time.time > agarrarObjectL.WaitTime  && WallPoint.transform.childCount == 0 || other.gameObject.CompareTag("Bible") && Time.time > agarrarObjectR.WaitTime && WallPoint.transform.childCount == 0)
         {
             active = true;
             other.transform.position = WallPoint.transform.position;
             other.transform.rotation = WallPoint.transform.rotation;
-            agarrarObject.pickedObject = null;
+            agarrarObjectL.pickedObject = null;
+            agarrarObjectR.pickedObject = null;
             other.GetComponent<Rigidbody>().useGravity = false;
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.gameObject.transform.SetParent(null);
-            agarrarObject.WaitTime = Time.time + TimeRate;
+            agarrarObjectL.WaitTime = Time.time + TimeRate;
+            agarrarObjectR.WaitTime = Time.time + TimeRate;
             other.tag = "PutBible";
             other.gameObject.transform.SetParent(WallPoint.gameObject.transform);
             bibleWall.BiblePuzzle();

@@ -16,7 +16,7 @@ public class CrossAngle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hand"))
         {
-            if (Input.GetKey("e") && Time.time > WaitTime)
+            if ((Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch) || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch)) && Time.time > WaitTime)
             {
                 if (angle < 360)
                 {

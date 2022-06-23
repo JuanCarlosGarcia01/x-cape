@@ -9,7 +9,9 @@ public class Puzzles : MonoBehaviour
     public OpenDoor OpenBatteryDoor;
     public OpenDoor OpenBibleDoor;
 
-    public GrabObjects grabObject;
+    public GrabObjectsL grabObjectL;
+    public GrabObjectsR grabObjectR;
+
 
     public BibleWallPoint bibleWall;
     public BibleWallPoint bibleWall1;
@@ -47,7 +49,8 @@ public class Puzzles : MonoBehaviour
         {
             other.transform.position = BatteryPoint.transform.position;
             other.transform.rotation = BatteryPoint.transform.rotation;
-            grabObject.pickedObject = null;
+            grabObjectL.pickedObject = null;
+            grabObjectR.pickedObject = null;
             other.GetComponent<Rigidbody>().useGravity = false;
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.gameObject.transform.SetParent(null);
