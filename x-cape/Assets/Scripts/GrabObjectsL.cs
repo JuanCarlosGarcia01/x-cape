@@ -12,6 +12,7 @@ public class GrabObjectsL : MonoBehaviour
     private float TimeRate = 1f;
     public AudioSource SoundPickBattery;
     public AudioSource BibleSound;
+    public GrabObjectsR grabObjectsR;
 
     void Update()
     {
@@ -39,6 +40,7 @@ public class GrabObjectsL : MonoBehaviour
             {
                 if (Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch) && pickedObject == null)
                 {
+
                     other.GetComponent<Rigidbody>().useGravity = false;
                     other.GetComponent<Rigidbody>().isKinematic = true;
                     other.transform.position = handPoint.transform.position;
@@ -47,6 +49,7 @@ public class GrabObjectsL : MonoBehaviour
                     WaitTime = Time.time + TimeRate;
                     if (other.gameObject.CompareTag("PutBible"))
                     {
+
                         BibleSound.Play();
                         Invoke("coldown", 2f);
                     }

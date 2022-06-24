@@ -13,9 +13,21 @@ public class LeverAngle : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Hand"))
+        if (other.gameObject.CompareTag("Hand1"))
         {
-            if ((Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch) || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch)) && Time.time > WaitTime)
+            if ((Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch)) && Time.time > WaitTime)
+            {
+                active = !active;
+                gameObject.LeanRotateX(active ? 45 : 315, 1f);
+                WaitTime = Time.time + RotateRate;
+                manager.Check();
+                SoundLever.Play();
+            }
+        }
+
+        if (other.gameObject.CompareTag("Hand2"))
+        {
+            if ((Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.LTouch)) && Time.time > WaitTime)
             {
                 active = !active;
                 gameObject.LeanRotateX(active ? 45 : 315, 1f);

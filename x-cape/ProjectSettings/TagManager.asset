@@ -11,6 +11,8 @@ TagManager:
   - Hand
   - Bible
   - PutBible
+  - Hand1
+  - Hand2
   layers:
   - Default
   - TransparentFX

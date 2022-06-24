@@ -12,6 +12,8 @@ public class GrabObjectsR : MonoBehaviour
     private float TimeRate = 1f;
     public AudioSource SoundPickBattery;
     public AudioSource BibleSound;
+    public GrabObjectsL grabObjectsL;
+
 
     void Update()
     {
@@ -39,6 +41,7 @@ public class GrabObjectsR : MonoBehaviour
             {
                 if (Input.GetKey("e") || OVRInput.GetDown(OVRInput.Button.One, OVRInput.Controller.RTouch) && pickedObject == null)
                 {
+
                     other.GetComponent<Rigidbody>().useGravity = false;
                     other.GetComponent<Rigidbody>().isKinematic = true;
                     other.transform.position = handPoint.transform.position;
