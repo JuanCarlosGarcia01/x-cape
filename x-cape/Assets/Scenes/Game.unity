@@ -1854,7 +1854,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.7349, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &147100514
 GameObject:
@@ -2082,7 +2082,7 @@ Transform:
   - {fileID: 1953951836}
   - {fileID: 708504002}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157160635 stripped
 GameObject:
@@ -4675,8 +4675,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallPoint: {fileID: 473567196}
-  agarrarObjectL: {fileID: 649987597}
-  agarrarObjectR: {fileID: 1812731864}
+  agarrarObjectL: {fileID: 649987598}
+  agarrarObjectR: {fileID: 1812731865}
   bibleWall: {fileID: 473567198}
   puzzles: {fileID: 1913642750}
   active: 0
@@ -4989,7 +4989,7 @@ Transform:
   m_Children:
   - {fileID: 50048534}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &432658112
 CharacterController:
@@ -5601,6 +5601,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7072732182189924235, guid: b9bdc4140a10e494eaf9ca8984c46b6c, type: 3}
+--- !u!4 &476802641 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
+  m_PrefabInstance: {fileID: 1162040438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &477058068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2572834968475377268, guid: b9bdc4140a10e494eaf9ca8984c46b6c, type: 3}
@@ -6340,7 +6345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 649987595}
   - component: {fileID: 649987596}
-  - component: {fileID: 649987597}
+  - component: {fileID: 649987598}
   m_Layer: 0
   m_Name: HandL
   m_TagString: Hand2
@@ -6376,7 +6381,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.4, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &649987597
+--- !u!114 &649987598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6385,7 +6390,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 649987594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0d5ddb74edacbb4d91bf02d9b78e892, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d32530c4d24e714a95c548869f288ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handPoint: {fileID: 919091140}
@@ -6395,7 +6400,8 @@ MonoBehaviour:
   WaitTime: 0
   SoundPickBattery: {fileID: 865429390}
   BibleSound: {fileID: 1014921424}
-  grabObjectsR: {fileID: 1812731864}
+  oppositeHand: {fileID: 1812731865}
+  hand: 1
 --- !u!1 &652104547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7428368982842107029, guid: 5fe692e31ed8ed04785d158db1b08ba2, type: 3}
@@ -8030,7 +8036,7 @@ Transform:
   m_GameObject: {fileID: 865429383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -69.39, y: 0.16, z: -14.28}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -8358,7 +8364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919091140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.129, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 649987595}
@@ -9086,8 +9092,9 @@ Transform:
   - {fileID: 2086221688}
   - {fileID: 1376164918}
   - {fileID: 835530094}
+  - {fileID: 1594776864}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1046491310 stripped
 GameObject:
@@ -12017,8 +12024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallPoint: {fileID: 2011993648}
-  agarrarObjectL: {fileID: 649987597}
-  agarrarObjectR: {fileID: 1812731864}
+  agarrarObjectL: {fileID: 649987598}
+  agarrarObjectR: {fileID: 1812731865}
   bibleWall: {fileID: 2011993650}
   puzzles: {fileID: 1913642750}
   active: 0
@@ -12046,7 +12053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438043708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.054, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812731863}
@@ -12860,11 +12867,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594776863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.176003, y: 1.089, z: -36.433}
+  m_LocalPosition: {x: -12.976002, y: -0.33099997, z: -56.001}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1045138446}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1594776865
 AudioSource:
@@ -14626,7 +14633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812731863}
   - component: {fileID: 1812731866}
-  - component: {fileID: 1812731864}
+  - component: {fileID: 1812731865}
   m_Layer: 0
   m_Name: HandR
   m_TagString: Hand1
@@ -14641,15 +14648,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812731862}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1438043709}
-  m_Father: {fileID: 1809751543}
-  m_RootOrder: 2
+  m_Father: {fileID: 476802641}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1812731864
+--- !u!114 &1812731865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14658,7 +14665,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812731862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580c4f1dbd981c342ba2ca45132fccb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d32530c4d24e714a95c548869f288ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handPoint: {fileID: 1438043708}
@@ -14668,7 +14675,8 @@ MonoBehaviour:
   WaitTime: 0
   SoundPickBattery: {fileID: 865429390}
   BibleSound: {fileID: 1014921424}
-  grabObjectsL: {fileID: 649987597}
+  oppositeHand: {fileID: 649987598}
+  hand: 0
 --- !u!65 &1812731866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15192,8 +15200,8 @@ MonoBehaviour:
   OpenCroosDoor: {fileID: 195034664}
   OpenBatteryDoor: {fileID: 2654927}
   OpenBibleDoor: {fileID: 1953951835}
-  grabObjectL: {fileID: 649987597}
-  grabObjectR: {fileID: 1812731864}
+  grabObjectL: {fileID: 649987598}
+  grabObjectR: {fileID: 1812731865}
   bibleWall: {fileID: 473567198}
   bibleWall1: {fileID: 1931959973}
   bibleWall2: {fileID: 2011993650}
@@ -17533,8 +17541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallPoint: {fileID: 1931959971}
-  agarrarObjectL: {fileID: 649987597}
-  agarrarObjectR: {fileID: 1812731864}
+  agarrarObjectL: {fileID: 649987598}
+  agarrarObjectR: {fileID: 1812731865}
   bibleWall: {fileID: 1931959973}
   puzzles: {fileID: 1913642750}
   active: 0

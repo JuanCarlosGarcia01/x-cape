@@ -3,8 +3,8 @@ using UnityEngine;
 public class BiblePuzzle : MonoBehaviour
 {
     public GameObject WallPoint;
-    public GrabObjectsL agarrarObjectL;
-    public GrabObjectsR agarrarObjectR;
+    public IGrabObject agarrarObjectL;
+    public IGrabObject agarrarObjectR;
     public BibleWallPoint bibleWall;
     public Puzzles puzzles;
     private float TimeRate = 2f;

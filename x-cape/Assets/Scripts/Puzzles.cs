@@ -9,8 +9,8 @@ public class Puzzles : MonoBehaviour
     public OpenDoor OpenBatteryDoor;
     public OpenDoor OpenBibleDoor;
 
-    public GrabObjectsL grabObjectL;
-    public GrabObjectsR grabObjectR;
+    public IGrabObject grabObjectL;
+    public IGrabObject grabObjectR;
 
 
     public BibleWallPoint bibleWall;
