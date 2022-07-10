@@ -10,7 +10,7 @@ public class BiblePuzzle : MonoBehaviour
     private float TimeRate = 2f;
     public bool active = false;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Bible") && Time.time > agarrarObjectL.WaitTime  && WallPoint.transform.childCount == 0 || other.gameObject.CompareTag("Bible") && Time.time > agarrarObjectR.WaitTime && WallPoint.transform.childCount == 0)
         {

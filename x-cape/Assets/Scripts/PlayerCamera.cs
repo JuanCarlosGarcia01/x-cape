@@ -5,7 +5,7 @@ public class PlayerCamera : MonoBehaviour
     Vector2 mouseMirar;
     Vector2 suavidadV;
 
-    public float sensibilidad = 5.0f;
+    public float sensibilidad = 1.0f;
     public float suavizado = 2.0f;
 
     GameObject jugador;

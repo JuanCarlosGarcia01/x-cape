@@ -42,7 +42,7 @@ public class Puzzles : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         //Poner Bateria y abrir puertas
         if (other.gameObject.CompareTag("Object"))
