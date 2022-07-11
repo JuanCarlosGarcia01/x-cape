@@ -55,10 +55,11 @@ public class Puzzles : MonoBehaviour
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.gameObject.transform.SetParent(null);
             other.tag = "ASD";
-            OpenBatteryDoor.Opendoor();
 
             BatterySound.Play();
             PutBatterySound.Play();
+
+            OpenBatteryDoor.Opendoor();
         }
     }
 
