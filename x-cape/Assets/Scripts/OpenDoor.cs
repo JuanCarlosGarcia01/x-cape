@@ -5,6 +5,11 @@ public class OpenDoor : MonoBehaviour
     public int angle = 0;
     public void Opendoor()
     {
-        gameObject.LeanRotateY(angle, 2f);
+        gameObject.LeanRotateZ(angle, 3f);
+    }
+
+    public void OpendoorBible()
+    {
+        gameObject.LeanRotateY(angle, 3f);
     }
 }

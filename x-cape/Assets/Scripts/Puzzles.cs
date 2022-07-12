@@ -9,6 +9,8 @@ public class Puzzles : MonoBehaviour
     public OpenDoor OpenBatteryDoor;
     public OpenDoor OpenBibleDoor;
 
+    public GameObject CollectibleBible;
+
     public IGrabObject grabObjectL;
     public IGrabObject grabObjectR;
 
@@ -67,7 +69,8 @@ public class Puzzles : MonoBehaviour
     {
         if (bibleWall.active == true && bibleWall1.active == true && bibleWall2.active == true)
         {
-            OpenBibleDoor.Opendoor();
+            OpenBibleDoor.OpendoorBible();
+            CollectibleBible.SetActive(true);
         }
     }
 }
