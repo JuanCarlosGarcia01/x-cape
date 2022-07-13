@@ -4,15 +4,21 @@ using UnityEngine.SceneManagement;
 public class Win : MonoBehaviour
 {
     public Score score;
-    public string scene;
+    public string sceneWin;
+    public string sceneLose;
 
     private void OnTriggerEnter(Collider collision)
 
     {
-        if (collision.CompareTag("Player") && score.score == 10)
+        if (collision.CompareTag("Player") && score.score >= 7)
         {
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(scene);
+            SceneManager.LoadScene(sceneWin);
+        }
+        else if (collision.CompareTag("Player") && score.score <= 7)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(sceneLose);
         }
     }
 }
