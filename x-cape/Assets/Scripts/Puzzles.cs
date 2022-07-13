@@ -40,7 +40,7 @@ public class Puzzles : MonoBehaviour
          //Comprobación puzzle cruces
         if (Cross.transform.rotation.eulerAngles.z == 180 && Cross1.transform.rotation.eulerAngles.z == 180 && Cross2.transform.rotation.eulerAngles.z == 180)
         {
-            OpenCroosDoor.Opendoor();
+            OpenCroosDoor.OpenDoorCross();
         }
     }
 

@@ -35,6 +35,6 @@ public class ILeverManager : MonoBehaviour
 
         // TODO OK
         actions?.Invoke();
-        OpenPalancasDoor.Opendoor();
+        OpenPalancasDoor.OpenDoorLever();
     }
 }
