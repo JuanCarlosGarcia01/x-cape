@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,7 +23,7 @@ public class ILeverManager : MonoBehaviour
         for (int i = 0; i < leversObj.Length; i++)
         {
             levers[i] = Random.Range(0, 2) == 0 ? false : true;
-            text.text += levers[i] ? "1" : "0";
+            text.text += levers[i] ? "↑" : "↓";
         }
     }
 
