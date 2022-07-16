@@ -21,7 +21,6 @@ public class OpenDoor : MonoBehaviour
 
     public void OpenDoorLever()
     {
-        Debug.Log("holaaaaaaaaaaaaaaaaaaaaaaaa");
         LeanTween.moveX(container, 182, 2f);
     }
 }
