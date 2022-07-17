@@ -23,7 +23,7 @@ public class ILeverManager : MonoBehaviour
         for (int i = 0; i < leversObj.Length; i++)
         {
             levers[i] = Random.Range(0, 2) == 0 ? false : true;
-            text.text += levers[i] ? "↑" : "↓";
+            text.text += levers[i] ? "↓" : "↑";
         }
     }
 
