@@ -10,6 +10,7 @@ public class ILeverManager : MonoBehaviour
     [SerializeField] private UnityEvent actions;
     [SerializeField] private TextMeshPro text;
 
+    public AudioSource VictorySound;
     public OpenDoor OpenPalancasDoor;
 
     private bool[] levers;
@@ -36,5 +37,6 @@ public class ILeverManager : MonoBehaviour
         // TODO OK
         actions?.Invoke();
         OpenPalancasDoor.OpenDoorLever();
+        VictorySound.Play();
     }
 }

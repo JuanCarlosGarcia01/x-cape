@@ -13,6 +13,8 @@ public class Sanity : MonoBehaviour
     public float changePerSecond;
     public float changePerSecondVignette;
     Vignette vignette;
+    public AudioSource heartSound;
+    public AudioSource demonioSound;
     void Start()
     {
         if(volume.profile.TryGet<Vignette>(out vignette))
@@ -26,6 +28,16 @@ public class Sanity : MonoBehaviour
         sanity += changePerSecond * Time.deltaTime;
         indicator.text = ((int)sanity).ToString();
 
+        if ((int)sanity == 30)
+        {
+            latido();
+        }
+
+        if ((int)sanity == 10)
+        {
+            demonio();
+        }
+
         if (sanity <= 1)
 
         {
@@ -34,6 +46,16 @@ public class Sanity : MonoBehaviour
             SceneManager.LoadScene("Lose");
         }
 
+    }
+
+    void latido()
+    {
+            heartSound.Play();
+    }
+
+    void demonio()
+    {
+        demonioSound.Play();
     }
 
 }

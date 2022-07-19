@@ -33,6 +33,7 @@ public class Puzzles : MonoBehaviour
 
     public AudioSource BatterySound;
     public AudioSource PutBatterySound;
+    public AudioSource VictorySound;
 
 
     public void ComprobateCross()
@@ -41,6 +42,7 @@ public class Puzzles : MonoBehaviour
         if (Cross.transform.rotation.eulerAngles.z == 180 && Cross1.transform.rotation.eulerAngles.z == 180 && Cross2.transform.rotation.eulerAngles.z == 180)
         {
             OpenCroosDoor.OpenDoorCross();
+            VictorySound.Play();
         }
     }
 
@@ -57,11 +59,10 @@ public class Puzzles : MonoBehaviour
             other.GetComponent<Rigidbody>().isKinematic = true;
             other.gameObject.transform.SetParent(null);
             other.tag = "ASD";
-
             BatterySound.Play();
             PutBatterySound.Play();
-
             OpenBatteryDoor.Opendoor();
+            VictorySound.Play();
         }
     }
 
@@ -71,6 +72,7 @@ public class Puzzles : MonoBehaviour
         {
             OpenBibleDoor.OpendoorBible();
             CollectibleBible.SetActive(true);
+            VictorySound.Play();
         }
     }
 }
